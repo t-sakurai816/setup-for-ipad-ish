@@ -18,6 +18,16 @@ function check_vim() {
   fi
 }
 
+# check installed bash
+function check_bash() {
+  if ! [ -x "$(command -v bash)" ]; then
+    echo -e "\e[33mNotice: bash is not installed.\e[m" >&2
+    apk add --no-cache bash
+  else
+    echo -e "\e[32mbash is installed. \e[m"
+  fi
+}
+
 # check installed openssh
 function check_openssh() {
   if ! [ -x "$(command -v ssh)" ]; then

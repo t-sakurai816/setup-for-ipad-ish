@@ -20,7 +20,7 @@ function check_vim() {
 
 # check installed openssh
 function check_openssh() {
-  if ! [ -x "$(command -v openssh)" ]; then
+  if ! [ -x "$(command -v ssh)" ]; then
     echo 'Error: openssh is not installed.' >&2
     apk add --no-cache openssh
   else

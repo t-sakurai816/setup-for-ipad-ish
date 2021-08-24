@@ -8,6 +8,7 @@ echo -e "If it's not there, I'll install it.\n"
 
 check_git
 check_vim
+check_bash
 check_openssh
 check_curl
 check_python3

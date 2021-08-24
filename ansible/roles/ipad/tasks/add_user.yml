@@ -1,0 +1,10 @@
+---
+- name: add takumi
+  become: true
+  user:
+    name: takumi
+    groups: wheel
+    shell: /bin/ash
+    append: yes
+    comment: "takumi"
+    state: present

@@ -3,7 +3,7 @@
 source ./functions/install_check.sh
 source ./functions/setup_ssh_github.sh
 
-echo "Install check"
+echo -e "\nInstall check"
 echo -e "If it's not there, I'll install it.\n"
 
 check_git

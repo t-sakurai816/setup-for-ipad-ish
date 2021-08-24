@@ -1,6 +1,6 @@
 #!/bin/ash
 
-source ./install_check/*
+source ./install_check.sh
 
 check_git
 check_python3

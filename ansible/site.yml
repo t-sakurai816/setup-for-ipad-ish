@@ -1,6 +1,0 @@
----
-- name: Setup for ish app of iPad
-  hosts: localhost
-
-  roles:
-    - ipad

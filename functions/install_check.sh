@@ -4,7 +4,7 @@ function check_git() {
     echo 'Error: git is not installed.' >&2
     apk add --no-cache git
   else
-    echo 'git is installed.'
+    echo -e "\e[32mgit is installed. \e[m"
   fi
 }
 
@@ -14,7 +14,7 @@ function check_vim() {
     echo 'Error: vim is not installed.' >&2
     apk add --no-cache vim
   else
-    echo 'vim is installed.'
+    echo -e "\e[32mvim is installed. \e[m"
   fi
 }
 
@@ -24,7 +24,7 @@ function check_openssh() {
     echo 'Error: openssh is not installed.' >&2
     apk add --no-cache openssh
   else
-    echo 'openssh is installed.'
+    echo -e "\e[32mopenssh is installed. \e[m"
   fi
 }
 
@@ -34,7 +34,7 @@ function check_curl() {
     echo 'Error: curl is not installed.' >&2
     apk add --no-cache curl
   else
-    echo 'curl is installed.'
+    echo -e "\e[32mcurl is installed. \e[m"
   fi
 }
 
@@ -44,7 +44,7 @@ function check_python3() {
     echo 'Error: python3 is not installed.' >&2
     apk add --no-cache python3
   else
-    echo 'python3 is installed.'
+    echo -e "\e[32mpython3 is installed. \e[m"
   fi
 }
 
@@ -54,7 +54,7 @@ function check_pip3() {
     echo 'Error: pip3 is not installed.' >&2
     apk add --no-cache py3-pip
   else
-    echo 'pip3 is installed.'
+    echo -e "\e[32mpip3 is installed. \e[m"
   fi
 }
 
@@ -64,7 +64,7 @@ function check_nodejs() {
     echo 'Error: nodejs is not installed.' >&2
     apk add --no-cache nodejs
   else
-    echo 'nodejs is installed.'
+    echo -e "\e[32mnodejs is installed. \e[m"
   fi
 }
 
@@ -74,6 +74,6 @@ function check_npm() {
     echo 'Error: npm is not installed.' >&2
     apk add --no-cache npm
   else
-    echo 'npm is installed.'
+    echo -e "\e[32mnpm is installed. \e[m"
   fi
 }

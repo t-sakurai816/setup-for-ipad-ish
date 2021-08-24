@@ -20,5 +20,3 @@ echo -e "\n\n"
 echo -e "Setup SSH for GitHub\n"
 
 setup_ssh_github
-
-alias ll='ls -l'

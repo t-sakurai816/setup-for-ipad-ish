@@ -52,7 +52,7 @@ function check_python3() {
 function check_pip3() {
   if ! [ -x "$(command -v pip3)" ]; then
     echo 'Error: pip3 is not installed.' >&2
-    apk add --no-cache pip3
+    apk add --no-cache py3-pip
   else
     echo 'pip3 is installed.'
   fi

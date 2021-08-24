@@ -8,7 +8,7 @@ function generate_github_rsa() {
 
 function setup_ssh_github() {
   if [ ! -e ~/.ssh/github_rsa ]; then
-    generate_github_rsa()
+    generate_github_rsa
     echo "###################################"
     echo "You go the https://github.com/settings/keys ."
     echo "Run the following command to verify"

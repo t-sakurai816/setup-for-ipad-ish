@@ -1,6 +1,7 @@
 #!/ein/ash
 
 source ./functions/install_check.sh
+source ./functions/create_user.sh
 source ./functions/setup_ssh_github.sh
 
 echo -e "\nInstall check"
@@ -19,6 +20,11 @@ check_fzf
 check_sudo
 
 echo -e "\n\n"
+
+echo -e "Creating user"
+create_user
+
+su $1
 
 echo -e "Setup SSH for GitHub\n"
 

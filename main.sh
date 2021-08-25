@@ -22,7 +22,7 @@ check_sudo
 echo -e "\n\n"
 
 echo -e "Creating user"
-create_user
+create_user $1
 
 su $1
 

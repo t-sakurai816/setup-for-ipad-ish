@@ -16,6 +16,7 @@ check_pip3
 check_nodejs
 check_npm
 check_fzf
+check_sudo
 
 echo -e "\n\n"
 

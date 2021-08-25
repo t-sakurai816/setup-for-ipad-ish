@@ -97,3 +97,13 @@ function check_fzf() {
     echo -e "\e[32mfzf is installed. \e[m"
   fi
 }
+
+# check installed sudo
+function check_sudo() {
+  if ! [ -x "$(command -v sudo)" ]; then
+    echo -e "\e[33mNotice: sudo is not installed.\e[m" >&2
+    apk add --no-cache sudo
+  else
+    echo -e "\e[32msudo is installed. \e[m"
+  fi
+}

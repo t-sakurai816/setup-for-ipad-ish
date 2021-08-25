@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/ein/ash
 
 source ./functions/install_check.sh
 source ./functions/setup_ssh_github.sh
@@ -15,6 +15,7 @@ check_python3
 check_pip3
 check_nodejs
 check_npm
+check_fzf
 
 echo -e "\n\n"
 

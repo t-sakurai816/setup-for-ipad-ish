@@ -87,3 +87,13 @@ function check_npm() {
     echo -e "\e[32mnpm is installed. \e[m"
   fi
 }
+
+# check installed fzf
+function check_fzf() {
+  if ! [ -x "$(command -v fzf)" ]; then
+    echo -e "\e[33mNotice: fzf is not installed.\e[m" >&2
+    apk add --no-cache fzf
+  else
+    echo -e "\e[32mfzf is installed. \e[m"
+  fi
+}

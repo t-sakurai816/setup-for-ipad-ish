@@ -17,12 +17,13 @@ EOF
 }
 
 function setup_ssh_github() {
-  if [ ! -e /home/$1/.ssh/github_rsa ]; then
-    generate_github_rsa
+  user=$1
+  if [ ! -e /home/$user/.ssh/github_rsa ]; then
+    generate_github_rsa $user
     if grep -q "github.com" /home/$1/.ssh/config; then
       echo "SSH config already exists."
     else
-      add_ssh_github_config
+      add_ssh_github_config $user
     fi
     echo "###################################"
     echo "You go the https://github.com/settings/keys."

@@ -37,25 +37,22 @@ function generate_github_rsa() {
 }
 
 function add_ssh_github_config() {
-  if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh
-  fi
   echo "Adding SSH config..."
   cat << EOF > ~/.ssh/config
-  Host github github.com
-    HostName github.com
-    IdentityFile ~/.ssh/github_rsa
-    User git
-  EOF
+Host github github.com
+  HostName github.com
+  IdentityFile ~/.ssh/github_rsa
+  User git
+\EOF
 }
 
 function setup_ssh_github() {
   if [ ! -e ~/.ssh/github_rsa ]; then
     generate_github_rsa
     if grep -q "github.com" ~/.ssh/config; then
-        echo "SSH config already exists."
+      echo "SSH config already exists."
     else
-    add_ssh_github_config
+      add_ssh_github_config
     fi
     echo "###################################"
     echo "You go the https://github.com/settings/keys."

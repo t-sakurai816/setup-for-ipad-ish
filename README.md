@@ -5,8 +5,10 @@ You can `git clone` this repository and then run the following command.
 
 
 ```
-cd setup-for-ipad-ish; ./main.sh
+cd setup-for-ipad-ish; ./main.sh {username}
 ```
+
+You can also create a user with the above command
 
 :warning: If necessary, comment out `check_○○` in `main.sh` before using it.
 

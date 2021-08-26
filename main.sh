@@ -24,7 +24,7 @@ echo -e "\n\n"
 echo -e "Creating user"
 create_user $1
 
-sudo -u $1 whoami
+su -c whoami $1
 
 echo -e "Setup SSH for GitHub\n"
 

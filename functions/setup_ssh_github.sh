@@ -14,6 +14,7 @@ Host github github.com
   IdentityFile /home/$1/.ssh/github_rsa
   User git
 EOF
+  chown -R $user:$user /home/$user/.ssh/config
 }
 
 function setup_ssh_github() {
@@ -26,6 +27,7 @@ function setup_ssh_github() {
       echo "SSH config already exists."
     else
       add_ssh_github_config $user
+      chown -R $user:$user /home/$user/.ssh
     fi
     echo "###################################"
     echo "You go the https://github.com/settings/keys."

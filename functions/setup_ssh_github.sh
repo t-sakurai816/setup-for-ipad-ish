@@ -1,25 +1,25 @@
 function generate_github_rsa() {
   echo "Generating RSA key pair..."
-  ssh-keygen -t rsa -N "" -f ~/.ssh/github_rsa
+  ssh-keygen -t rsa -N "" -f /home/$1/.ssh/github_rsa
   echo "Done."
-  cat ~/.ssh/github_rsa.pub > /dev/clipboard
+  cat /home/$1/.ssh/github_rsa.pub > /dev/clipboard
   echo "Public key copied to clipboard."
 }
 
 function add_ssh_github_config() {
   echo "Adding SSH config..."
-  cat << EOF > ~/.ssh/config
+  cat << EOF > /home/$1/.ssh/config
 Host github github.com
   HostName github.com
-  IdentityFile ~/.ssh/github_rsa
+  IdentityFile /home/$1/.ssh/github_rsa
   User git
 EOF
 }
 
 function setup_ssh_github() {
-  if [ ! -e ~/.ssh/github_rsa ]; then
+  if [ ! -e /home/$1/.ssh/github_rsa ]; then
     generate_github_rsa
-    if grep -q "github.com" ~/.ssh/config; then
+    if grep -q "github.com" /home/$1/.ssh/config; then
       echo "SSH config already exists."
     else
       add_ssh_github_config

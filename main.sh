@@ -28,5 +28,5 @@ su -c whoami $1
 
 echo -e "Setup SSH for GitHub\n"
 
-su -c setup_ssh_github $1
+setup_ssh_github $1
 

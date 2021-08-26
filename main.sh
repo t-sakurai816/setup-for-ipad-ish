@@ -28,5 +28,5 @@ sudo -u $1 whoami
 
 echo -e "Setup SSH for GitHub\n"
 
-sudo -u $1 setup_ssh_github
+su -c setup_ssh_github $1
 

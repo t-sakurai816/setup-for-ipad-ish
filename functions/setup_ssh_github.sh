@@ -19,6 +19,7 @@ EOF
 function setup_ssh_github() {
   user=$1
   if [ ! -e /home/$user/.ssh/github_rsa ]; then
+    mkdir -p /home/$user/.ssh
     generate_github_rsa $user
     if grep -q "github.com" /home/$1/.ssh/config; then
       echo "SSH config already exists."
